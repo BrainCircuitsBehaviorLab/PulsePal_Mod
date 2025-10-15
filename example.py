@@ -108,7 +108,7 @@ pulse_pal.programOutputChannelParam("pulseTrainDuration", output_channel, durati
 pulse_pal.setRampEnabled(output_channel, True)
 pulse_pal.setRampDuration(output_channel, 0.1)  # seconds
 
-# 3) Link output channel 1 to trigger channel 1 (0 = not linked, 1 = linked).
+# 3) Link trigger channel 1 to output channel 1 (0 = not linked, 1 = linked).
 pulse_pal.programOutputChannelParam("linkTriggerChannel1", output_channel, 1)
 
 # 4) Set trigger channel 1 to pulse-gated mode
@@ -143,7 +143,7 @@ pulse_pal.programOutputChannelParam(
 )
 pulse_pal.programOutputChannelParam("pulseTrainDuration", output_channel, duration)
 
-# 2) Link output channel 2 to trigger channel 2 (0 = not linked, 1 = linked).
+# 2) Link trigger channel 2 to output channel 2(0 = not linked, 1 = linked).
 pulse_pal.programOutputChannelParam("linkTriggerChannel2", output_channel, 1)
 
 # 3) Set trigger channel 2 to normal mode (0 = normal, 1 = toggle, 2 = pulse-gated).
@@ -190,7 +190,7 @@ pulse_pal.programOutputChannelParam("phase1Duration", 3, sample_width)
 pulse_pal.programOutputChannelParam("customTrainID", 4, 1)
 pulse_pal.programOutputChannelParam("phase1Duration", 4, sample_width)
 
-# 4) Link output channels 3 and 4 to trigger channel 2 (0 = not linked, 1 = linked).
+# 4) Link trigger channel 2 to output channels 3 and 4 (0 = not linked, 1 = linked).
 pulse_pal.programOutputChannelParam("linkTriggerChannel2", 3, 1)
 pulse_pal.programOutputChannelParam("linkTriggerChannel2", 4, 1)
 
