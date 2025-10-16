@@ -1,11 +1,11 @@
 from PulsePal import PulsePalObject
 
-# this file contains another example of use
+# this file contains a real case of use in our lab
 # in this case, we configure the PulsePal to generate
-# two different pulse trains, each one triggered by a different trigger channel
+# 4 different pulse trains all triggered by the same trigger channel
 # the first train is a single long pulse with ramp down
-# the second train is a pulse train at 20 Hz
-# both trains are pulse-gated, meaning that they start when the trigger goes high
+# the other trains are pulse trains of varying frequencies
+# all trains are pulse-gated, meaning that they start when the trigger goes high
 # and stop when the trigger goes low
 
 
