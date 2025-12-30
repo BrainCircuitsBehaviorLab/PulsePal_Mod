@@ -39,7 +39,7 @@ for channel in range(1, 5):
 
 
 # ---- TRIGGER CHANNEL 1 ---- OUTPUT CHANNEL 1 ---- SINGLE PULSE WITH RAMP ----
-# 1) Create a 30 s monophasic 5 V pulse on output channel 1.
+# 1) Create a 180 s monophasic 5 V pulse on output channel 1.
 # Because this train contains a single pulse, the train duration must match
 # the pulse duration (phase1Duration).
 trigger_channel = 1
@@ -64,7 +64,7 @@ pulse_pal.programTriggerChannelParam("triggerMode", trigger_channel, 2)
 
 
 # ---- TRIGGER CHANNEL 1 ---- OUTPUT CHANNEL 2 ---- PULSE TRAIN ----
-# 1) Program a 5 V pulse train in channel 2 at 20 Hz for a total duration of 30 s.
+# 1) Program a 5 V pulse train in channel 2 at 20 Hz for a total duration of 180 s.
 # Since 20 Hz means 20 cycles per second, each cycle lasts 1 / 20 = 0.05 s (50 ms).
 # Within each 50 ms cycle, the signal should be ON for 5 ms and OFF for 45 ms.
 trigger_channel = 1
@@ -88,7 +88,7 @@ pulse_pal.programOutputChannelParam("linkTriggerChannel1", output_channel, 1)
 
 
 # ---- TRIGGER CHANNEL 1 ---- OUTPUT CHANNEL 3 ---- PULSE TRAIN ----
-# 1) Program a 5 V pulse train in channel 3 at 35 Hz for a total duration of 30 s.
+# 1) Program a 5 V pulse train in channel 3 at 35 Hz for a total duration of 180 s.
 # Since 40 Hz means 40 cycles per second, each cycle lasts 1 / 40 = 0.025 s (25 ms).
 # Within each 25 ms cycle, the signal should be ON for 2.5 ms and OFF for 22.5 ms.
 
@@ -113,7 +113,7 @@ pulse_pal.programOutputChannelParam("linkTriggerChannel1", output_channel, 1)
 
 
 # ---- TRIGGER CHANNEL 1 ---- OUTPUT CHANNEL 4 ---- PULSE TRAIN ----
-# 1) Program a 5 V pulse train in channel 4 at 10 Hz for a total duration of 30 s.
+# 1) Program a 5 V pulse train in channel 4 at 10 Hz for a total duration of 180 s.
 # Since 10 Hz means 10 cycles per second, each cycle lasts 1 / 10 = 0.1 s (100 ms).
 # Within each 100 ms cycle, the signal should be ON for 10 ms and OFF for 90 ms.
 

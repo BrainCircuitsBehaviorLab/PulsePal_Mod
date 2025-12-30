@@ -49,7 +49,7 @@ for channel in range(1, 5):
 trigger_channel = 1
 output_channel = 1
 voltage = 5  # volts
-duration = 180  # seconds
+duration = 30  # seconds
 
 pulse_pal.programOutputChannelParam("phase1Voltage", output_channel, voltage)
 pulse_pal.programOutputChannelParam("phase1Duration", output_channel, duration)
@@ -77,7 +77,7 @@ pulse_pal.programTriggerChannelParam("triggerMode", trigger_channel, 2)
 trigger_channel = 2
 output_channel = 2
 voltage = 5  # volts
-duration = 180  # seconds
+duration = 30  # seconds
 
 pulse_pal.programOutputChannelParam("phase1Voltage", output_channel, voltage)
 pulse_pal.programOutputChannelParam("phase1Duration", output_channel, duration)
@@ -99,7 +99,7 @@ pulse_pal.programTriggerChannelParam("triggerMode", trigger_channel, 2)
 # ---- TRIGGER CHANNEL 1 ---- OUTPUT CHANNEL 3 ---- PULSE TRAIN ----
 # 1) Program a 5 V pulse train in channel 3 at 20 Hz for a total duration of 30 s.
 # Since 20 Hz means 20 cycles per second, each cycle lasts 1 / 20 = 0.05 s (50 ms).
-# Within each 50 ms cycle, the signal should be ON for 5 ms and OFF for 45 ms.
+# Within each 50 ms cycle, the signal should be ON for 5 ms and OFF for 45 ms. 10% ON.
 trigger_channel = 1
 output_channel = 3
 voltage = 5  # volts
@@ -124,7 +124,7 @@ pulse_pal.programOutputChannelParam("linkTriggerChannel1", output_channel, 1)
 # ---- TRIGGER CHANNEL 2 ---- OUTPUT CHANNEL 4 ---- PULSE TRAIN ----
 # 1) Program a 5 V pulse train in channel 4 at 20 Hz for a total duration of 30 s.
 # Since 20 Hz means 20 cycles per second, each cycle lasts 1 / 20 = 0.05 s (50 ms).
-# Within each 50 ms cycle, the signal should be ON for 5 ms and OFF for 45 ms.
+# Within each 50 ms cycle, the signal should be ON for 5 ms and OFF for 45 ms. 10% ON.
 trigger_channel = 2
 output_channel = 4
 voltage = 5  # volts
@@ -140,7 +140,7 @@ pulse_pal.programOutputChannelParam(
 pulse_pal.programOutputChannelParam("pulseTrainDuration", output_channel, duration)
 
 # 2) Link trigger channel 2 to output channel 4 (0 = not linked, 1 = linked).
-pulse_pal.programOutputChannelParam("linkTriggerChannel1", output_channel, 1)
+pulse_pal.programOutputChannelParam("linkTriggerChannel2", output_channel, 1)
 
 # 3) Set trigger channel 2 is already pulse-gated from above
 
