@@ -37,7 +37,7 @@ class PulsePalObject(object):
     DAC_BITMAX_MODEL_2 = 65535
     CYCLE_FREQUENCY = 20000  # Hz
     RAMP_SET_ENABLED_OPCODE = 91  # 0 = off, 1 = on
-    RAMP_SET_DURATION_OPCODE = 92  # uint32 little-endian (s)
+    RAMP_SET_DURATION_OPCODE = 92  # uint32 little-endian (ms)
 
     def __init__(self, port_name):
         """
@@ -537,14 +537,14 @@ class PulsePalObject(object):
         if len(ok) == 0:
             raise PulsePalError("No ACK after setRampEnabled().")
 
-    def setRampDuration(self, channel: int, s: int):
+    def setRampDuration(self, channel: int, s: float):
         """
         Set ramp-down duration in seconds for a specific channel (opcode 92).
         channel: 1..4
         """
         if channel < 1 or channel > 4:
             raise PulsePalError("Channel must be 1..4")
-        ms = int(s * 1000)  # convert to ms
+        ms = int(s * 1000.0)  # convert seconds to milliseconds (firmware expects ms as uint32)
         self.Port.write(
             (self.OP_MENU_BYTE, self.RAMP_SET_DURATION_OPCODE, channel),
             "uint8",
